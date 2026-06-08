@@ -61,15 +61,15 @@ logits     = final_RMSNorm(residual) @ lm_head.T
 
 Scored with a pre-registered 4-bucket classifier (math_specific / numeric / code_syntax / other). Digits are NOT math-specific. Bare `_`, `^`, `$` are NOT math.
 
-**L18 — PASSES.** math_specific = 0.20, all from math words (circumference, consecutive, 平方, nonzero), zero digits. Shuffled-label null well below the real delta (lock run at n=200 pending for formal p-value). The math concept is cleanly, specifically separable at mid-stack.
+**L18 — PASSES (p≈0.02).** math_specific = 0.20, all from math words (circumference, consecutive, 平方, nonzero), zero digits. 3/200 shuffles ≥ observed (null mean 0.008, null max 0.25). Significant and real, but not airtight — ~1.5% of random 40/40 splits reach 0.20 by combinatorics. The concept is cleanly, specifically separable at mid-stack.
 
-**L35 — FAILS.** math_specific = 0.15, but shuffled-label max = 0.20 (p = 0.23, not significant). At the output layer, the math direction is 50% digits — the shared numeric axis that math and code occupy together. Random label splits also surface this axis. Math-specific notation (½, ∜, π) sits inside the null's tail.
+**L35 — FAILS (p≈0.09).** math_specific = 0.15, but 17/200 shuffles ≥ observed (null mean 0.032, null max 0.60). At the output layer, the math direction is 50% digits — the shared numeric axis that math and code occupy together. Random label splits also surface this axis. Math-specific notation (½, ∜, π) sits inside the null's tail.
 
 The finding: concepts live semantically at mid-stack (L18), where they're cleanly separable. At late-stack (L35), concepts dissolve into generic output vocabulary. The shuffled-label null earned its keep — without it, L35 would have been called a pass.
 
-## Gate 2: Concept — PASSED at L18, FAILED at L35
+## Gate 2: Concept — LOCKED. PASSED at L18 (p≈0.02), FAILED at L35 (p≈0.09)
 
-Lock run (n=200 shuffles + 5 gaussians) pending to formalize the L18 p-value.
+n=200 shuffles + 5 gaussians. All non-shuffle controls ≈ 0.00 math-specific. Full results: [`experiments/01b_results.md`](experiments/01b_results.md).
 
 ## Gate 3: Dynamics — NOT YET
 
