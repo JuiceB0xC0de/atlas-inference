@@ -1,0 +1,45 @@
+# --- Data: never commit the atlas or any derived artifacts ---
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+data/
+artifacts/
+
+# --- Model weights / tensors ---
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.gguf
+*.npy
+*.npz
+*.h5
+
+# --- Secrets / credentials ---
+.env
+.env.*
+*.key
+*.pem
+auth.json
+secrets.*
+credentials.*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# --- Tracking / logs ---
+wandb/
+*.log
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+.vscode/
