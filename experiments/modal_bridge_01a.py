@@ -70,7 +70,11 @@ def run_bridge(atlas_idx: dict, layers_recon, layers_read, probe_texts,
         out.scatter_(-1, idx, vals)
         return out
 
+    _sae_cache = {}  # avoid re-loading layers used in both recon and read
+
     def load_sae(layer):
+        if layer in _sae_cache:
+            return _sae_cache[layer]
         sae = torch.load(hf_hub_download(SAE_REPO, f"layer{layer}.sae.pt"),
                          map_location=dev, weights_only=True)
         W_enc = sae["W_enc"].T.float().to(dev)    # [d_model, width]
@@ -78,6 +82,7 @@ def run_bridge(atlas_idx: dict, layers_recon, layers_read, probe_texts,
         W_dec = sae["W_dec"].float().to(dev)      # [d_model, width]
         b_dec = sae.get("b_dec")
         b_dec = b_dec.float().to(dev) if b_dec is not None else torch.zeros(W_dec.shape[0], device=dev)
+        _sae_cache[layer] = (W_enc, b_enc, W_dec, b_dec)
         return W_enc, b_enc, W_dec, b_dec
 
     # ── capture resid_post (decoder-layer output) at the requested layers ──
@@ -106,7 +111,7 @@ def run_bridge(atlas_idx: dict, layers_recon, layers_read, probe_texts,
     acts = capture(all_layers)
     report = {"recon": {}, "read": {}}
 
-    # ── STEP 0: reconstruction gate ──
+    # ── STEP 0: reconstruction gate (per-position overlap, BOS-excluded) ──
     def topk_set(logits, k):
         return set(torch.topk(logits, k, dim=-1).indices.tolist())
 
@@ -114,7 +119,10 @@ def run_bridge(atlas_idx: dict, layers_recon, layers_read, probe_texts,
         W_enc, b_enc, W_dec, b_dec = load_sae(L)
         agg = {k: [] for k in
                ("cos_nobias", "cos_bias", "overlap_nobias", "overlap_bias", "norm_x", "norm_xhat")}
-        for x in acts[L]:                          # [seq, d_model]
+        ov_bias_no_bos, per_position = [], []
+        for x, txt in zip(acts[L], probe_texts):   # x: [seq, d_model]
+            ids = tok(txt, return_tensors="pt").input_ids[0]
+            toks = [tok.decode([int(i)]) for i in ids]
             f = topk_relu(x @ W_enc + b_enc, K_SPARSE)
             base = f @ W_dec.T                     # [seq, d_model]
             for tag, xhat in (("nobias", base), ("bias", base + b_dec)):
@@ -123,9 +131,17 @@ def run_bridge(atlas_idx: dict, layers_recon, layers_read, probe_texts,
                 ov = [len(topk_set(lx[p], k_tokens) & topk_set(lxh[p], k_tokens)) / k_tokens
                       for p in range(x.shape[0])]
                 agg[f"overlap_{tag}"].append(sum(ov) / len(ov))
+                if tag == "bias":                  # the correct convention (b_dec) for full recon
+                    if len(ov) > 1:                # drop BOS at position 0 — high-entropy noise
+                        ov_bias_no_bos.append(sum(ov[1:]) / len(ov[1:]))
+                    per_position.append([[t, round(o, 3)] for t, o in zip(toks, ov)])
             agg["norm_x"].append(x.norm(dim=-1).mean().item())
             agg["norm_xhat"].append(base.norm(dim=-1).mean().item())
-        report["recon"][L] = {k: round(sum(v) / len(v), 4) for k, v in agg.items()}
+        rec = {k: round(sum(v) / len(v), 4) for k, v in agg.items()}
+        rec["overlap_bias_no_bos"] = (round(sum(ov_bias_no_bos) / len(ov_bias_no_bos), 4)
+                                      if ov_bias_no_bos else None)
+        rec["per_position_bias"] = per_position    # [[token, overlap], ...] per probe text
+        report["recon"][L] = rec
 
     # ── STEP 01A: decode features → tokens, with norm-matched controls ──
     def decode(W_dec, idx):

@@ -60,6 +60,7 @@ def load_sae_decoder(repo: str, layer: int, device: str = "cpu"):
     sae = torch.load(path, map_location=device, weights_only=True)
     W_dec = sae["W_dec"].float()            # [4096, 65536] — columns are residual directions
     device = W_dec.device
+    b_dec = sae.get("b_dec")
     b_dec = b_dec.float().to(device=device) if b_dec is not None else torch.zeros(
         W_dec.shape[0], device=device, dtype=W_dec.dtype)
     return W_dec, b_dec

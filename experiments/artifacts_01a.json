@@ -6,7 +6,362 @@
       "overlap_nobias": 0.3111,
       "overlap_bias": 0.5953,
       "norm_x": 33.5996,
-      "norm_xhat": 26.0025
+      "norm_xhat": 26.0025,
+      "overlap_bias_no_bos": 0.5954,
+      "per_position_bias": [
+        [
+          [
+            "The",
+            0.75
+          ],
+          [
+            " integral",
+            0.583
+          ],
+          [
+            " of",
+            0.5
+          ],
+          [
+            " x",
+            0.417
+          ],
+          [
+            " squared",
+            0.5
+          ],
+          [
+            " from",
+            0.583
+          ],
+          [
+            " zero",
+            0.583
+          ],
+          [
+            " to",
+            0.583
+          ],
+          [
+            " one",
+            0.5
+          ],
+          [
+            " equals",
+            0.417
+          ],
+          [
+            " one",
+            0.333
+          ],
+          [
+            " third",
+            0.5
+          ],
+          [
+            ".",
+            0.5
+          ]
+        ],
+        [
+          [
+            "She",
+            0.583
+          ],
+          [
+            " walked",
+            0.5
+          ],
+          [
+            " quietly",
+            0.5
+          ],
+          [
+            " through",
+            0.667
+          ],
+          [
+            " the",
+            0.833
+          ],
+          [
+            " old",
+            0.833
+          ],
+          [
+            " library",
+            0.75
+          ],
+          [
+            " at",
+            0.667
+          ],
+          [
+            " dusk",
+            0.417
+          ],
+          [
+            ".",
+            0.667
+          ]
+        ],
+        [
+          [
+            "def",
+            0.5
+          ],
+          [
+            " fibonacci",
+            0.417
+          ],
+          [
+            "(n",
+            0.5
+          ],
+          [
+            "):",
+            0.417
+          ],
+          [
+            " return",
+            0.5
+          ],
+          [
+            " n",
+            0.667
+          ],
+          [
+            " if",
+            0.667
+          ],
+          [
+            " n",
+            0.583
+          ],
+          [
+            " <",
+            0.5
+          ],
+          [
+            " ",
+            0.833
+          ],
+          [
+            "2",
+            0.583
+          ],
+          [
+            " else",
+            0.75
+          ],
+          [
+            " fibonacci",
+            0.667
+          ],
+          [
+            "(n",
+            0.167
+          ],
+          [
+            "-",
+            0.583
+          ],
+          [
+            "1",
+            0.75
+          ],
+          [
+            ")",
+            0.583
+          ],
+          [
+            " +",
+            0.583
+          ],
+          [
+            " fibonacci",
+            0.667
+          ],
+          [
+            "(n",
+            0.333
+          ],
+          [
+            "-",
+            0.667
+          ],
+          [
+            "2",
+            0.5
+          ],
+          [
+            ")",
+            0.667
+          ]
+        ],
+        [
+          [
+            "The",
+            0.75
+          ],
+          [
+            " mitochond",
+            0.667
+          ],
+          [
+            "ria",
+            0.667
+          ],
+          [
+            " is",
+            0.583
+          ],
+          [
+            " the",
+            0.75
+          ],
+          [
+            " powerhouse",
+            0.5
+          ],
+          [
+            " of",
+            0.167
+          ],
+          [
+            " the",
+            0.833
+          ],
+          [
+            " cell",
+            0.833
+          ],
+          [
+            ".",
+            0.333
+          ]
+        ],
+        [
+          [
+            "In",
+            0.75
+          ],
+          [
+            " ",
+            0.833
+          ],
+          [
+            "1",
+            0.667
+          ],
+          [
+            "9",
+            0.5
+          ],
+          [
+            "6",
+            0.5
+          ],
+          [
+            "9",
+            0.833
+          ],
+          [
+            ",",
+            0.667
+          ],
+          [
+            " humans",
+            0.667
+          ],
+          [
+            " first",
+            0.667
+          ],
+          [
+            " set",
+            0.667
+          ],
+          [
+            " foot",
+            0.583
+          ],
+          [
+            " on",
+            0.667
+          ],
+          [
+            " the",
+            1.0
+          ],
+          [
+            " surface",
+            0.667
+          ],
+          [
+            " of",
+            0.75
+          ],
+          [
+            " the",
+            0.833
+          ],
+          [
+            " moon",
+            0.5
+          ],
+          [
+            ".",
+            0.5
+          ]
+        ],
+        [
+          [
+            "Prices",
+            0.25
+          ],
+          [
+            " rose",
+            0.25
+          ],
+          [
+            " three",
+            0.583
+          ],
+          [
+            " percent",
+            0.833
+          ],
+          [
+            " while",
+            0.667
+          ],
+          [
+            " wages",
+            0.417
+          ],
+          [
+            " stayed",
+            0.333
+          ],
+          [
+            " flat",
+            0.5
+          ],
+          [
+            " this",
+            0.667
+          ],
+          [
+            " quarter",
+            1.0
+          ],
+          [
+            ".",
+            0.583
+          ]
+        ]
+      ]
     },
     "18": {
       "cos_nobias": 0.7241,
@@ -14,7 +369,362 @@
       "overlap_nobias": 0.4142,
       "overlap_bias": 0.4517,
       "norm_x": 756.0596,
-      "norm_xhat": 903.4233
+      "norm_xhat": 903.4233,
+      "overlap_bias_no_bos": 0.4881,
+      "per_position_bias": [
+        [
+          [
+            "The",
+            0.0
+          ],
+          [
+            " integral",
+            0.583
+          ],
+          [
+            " of",
+            0.667
+          ],
+          [
+            " x",
+            0.333
+          ],
+          [
+            " squared",
+            0.333
+          ],
+          [
+            " from",
+            0.333
+          ],
+          [
+            " zero",
+            0.333
+          ],
+          [
+            " to",
+            0.5
+          ],
+          [
+            " one",
+            0.5
+          ],
+          [
+            " equals",
+            0.583
+          ],
+          [
+            " one",
+            0.417
+          ],
+          [
+            " third",
+            0.333
+          ],
+          [
+            ".",
+            0.667
+          ]
+        ],
+        [
+          [
+            "She",
+            0.0
+          ],
+          [
+            " walked",
+            0.583
+          ],
+          [
+            " quietly",
+            0.417
+          ],
+          [
+            " through",
+            0.333
+          ],
+          [
+            " the",
+            0.417
+          ],
+          [
+            " old",
+            0.667
+          ],
+          [
+            " library",
+            0.167
+          ],
+          [
+            " at",
+            0.167
+          ],
+          [
+            " dusk",
+            0.583
+          ],
+          [
+            ".",
+            0.417
+          ]
+        ],
+        [
+          [
+            "def",
+            0.167
+          ],
+          [
+            " fibonacci",
+            0.75
+          ],
+          [
+            "(n",
+            0.583
+          ],
+          [
+            "):",
+            0.5
+          ],
+          [
+            " return",
+            0.75
+          ],
+          [
+            " n",
+            0.5
+          ],
+          [
+            " if",
+            0.833
+          ],
+          [
+            " n",
+            0.583
+          ],
+          [
+            " <",
+            0.5
+          ],
+          [
+            " ",
+            0.75
+          ],
+          [
+            "2",
+            0.25
+          ],
+          [
+            " else",
+            0.667
+          ],
+          [
+            " fibonacci",
+            0.583
+          ],
+          [
+            "(n",
+            0.583
+          ],
+          [
+            "-",
+            0.667
+          ],
+          [
+            "1",
+            0.583
+          ],
+          [
+            ")",
+            0.417
+          ],
+          [
+            " +",
+            0.417
+          ],
+          [
+            " fibonacci",
+            0.25
+          ],
+          [
+            "(n",
+            0.417
+          ],
+          [
+            "-",
+            0.333
+          ],
+          [
+            "2",
+            0.417
+          ],
+          [
+            ")",
+            0.333
+          ]
+        ],
+        [
+          [
+            "The",
+            0.0
+          ],
+          [
+            " mitochond",
+            0.5
+          ],
+          [
+            "ria",
+            0.583
+          ],
+          [
+            " is",
+            0.667
+          ],
+          [
+            " the",
+            0.417
+          ],
+          [
+            " powerhouse",
+            0.5
+          ],
+          [
+            " of",
+            0.333
+          ],
+          [
+            " the",
+            0.5
+          ],
+          [
+            " cell",
+            0.5
+          ],
+          [
+            ".",
+            0.583
+          ]
+        ],
+        [
+          [
+            "In",
+            0.0
+          ],
+          [
+            " ",
+            0.417
+          ],
+          [
+            "1",
+            0.417
+          ],
+          [
+            "9",
+            0.5
+          ],
+          [
+            "6",
+            0.667
+          ],
+          [
+            "9",
+            0.417
+          ],
+          [
+            ",",
+            0.583
+          ],
+          [
+            " humans",
+            0.5
+          ],
+          [
+            " first",
+            0.417
+          ],
+          [
+            " set",
+            0.333
+          ],
+          [
+            " foot",
+            0.583
+          ],
+          [
+            " on",
+            0.75
+          ],
+          [
+            " the",
+            0.667
+          ],
+          [
+            " surface",
+            0.25
+          ],
+          [
+            " of",
+            0.583
+          ],
+          [
+            " the",
+            0.75
+          ],
+          [
+            " moon",
+            0.333
+          ],
+          [
+            ".",
+            0.167
+          ]
+        ],
+        [
+          [
+            "Prices",
+            0.0
+          ],
+          [
+            " rose",
+            0.417
+          ],
+          [
+            " three",
+            0.667
+          ],
+          [
+            " percent",
+            0.833
+          ],
+          [
+            " while",
+            0.5
+          ],
+          [
+            " wages",
+            0.667
+          ],
+          [
+            " stayed",
+            0.417
+          ],
+          [
+            " flat",
+            0.25
+          ],
+          [
+            " this",
+            0.667
+          ],
+          [
+            " quarter",
+            0.5
+          ],
+          [
+            ".",
+            0.25
+          ]
+        ]
+      ]
     },
     "35": {
       "cos_nobias": 0.5839,
@@ -22,7 +732,362 @@
       "overlap_nobias": 0.3694,
       "overlap_bias": 0.6904,
       "norm_x": 1964.7973,
-      "norm_xhat": 1103.4639
+      "norm_xhat": 1103.4639,
+      "overlap_bias_no_bos": 0.6793,
+      "per_position_bias": [
+        [
+          [
+            "The",
+            0.917
+          ],
+          [
+            " integral",
+            0.5
+          ],
+          [
+            " of",
+            0.833
+          ],
+          [
+            " x",
+            0.5
+          ],
+          [
+            " squared",
+            0.75
+          ],
+          [
+            " from",
+            0.833
+          ],
+          [
+            " zero",
+            0.75
+          ],
+          [
+            " to",
+            0.75
+          ],
+          [
+            " one",
+            0.583
+          ],
+          [
+            " equals",
+            0.75
+          ],
+          [
+            " one",
+            0.667
+          ],
+          [
+            " third",
+            0.667
+          ],
+          [
+            ".",
+            0.583
+          ]
+        ],
+        [
+          [
+            "She",
+            0.667
+          ],
+          [
+            " walked",
+            0.583
+          ],
+          [
+            " quietly",
+            0.833
+          ],
+          [
+            " through",
+            0.5
+          ],
+          [
+            " the",
+            0.25
+          ],
+          [
+            " old",
+            0.417
+          ],
+          [
+            " library",
+            0.5
+          ],
+          [
+            " at",
+            0.167
+          ],
+          [
+            " dusk",
+            0.667
+          ],
+          [
+            ".",
+            0.667
+          ]
+        ],
+        [
+          [
+            "def",
+            0.583
+          ],
+          [
+            " fibonacci",
+            0.667
+          ],
+          [
+            "(n",
+            0.917
+          ],
+          [
+            "):",
+            0.75
+          ],
+          [
+            " return",
+            0.583
+          ],
+          [
+            " n",
+            0.583
+          ],
+          [
+            " if",
+            0.833
+          ],
+          [
+            " n",
+            0.917
+          ],
+          [
+            " <",
+            0.75
+          ],
+          [
+            " ",
+            0.917
+          ],
+          [
+            "2",
+            0.917
+          ],
+          [
+            " else",
+            0.833
+          ],
+          [
+            " fibonacci",
+            0.667
+          ],
+          [
+            "(n",
+            0.833
+          ],
+          [
+            "-",
+            0.667
+          ],
+          [
+            "1",
+            0.75
+          ],
+          [
+            ")",
+            0.917
+          ],
+          [
+            " +",
+            0.917
+          ],
+          [
+            " fibonacci",
+            0.583
+          ],
+          [
+            "(n",
+            0.833
+          ],
+          [
+            "-",
+            0.917
+          ],
+          [
+            "2",
+            0.917
+          ],
+          [
+            ")",
+            0.833
+          ]
+        ],
+        [
+          [
+            "The",
+            0.917
+          ],
+          [
+            " mitochond",
+            0.75
+          ],
+          [
+            "ria",
+            0.833
+          ],
+          [
+            " is",
+            0.833
+          ],
+          [
+            " the",
+            0.583
+          ],
+          [
+            " powerhouse",
+            0.75
+          ],
+          [
+            " of",
+            0.75
+          ],
+          [
+            " the",
+            0.583
+          ],
+          [
+            " cell",
+            0.583
+          ],
+          [
+            ".",
+            0.75
+          ]
+        ],
+        [
+          [
+            "In",
+            0.833
+          ],
+          [
+            " ",
+            1.0
+          ],
+          [
+            "1",
+            0.833
+          ],
+          [
+            "9",
+            1.0
+          ],
+          [
+            "6",
+            1.0
+          ],
+          [
+            "9",
+            0.833
+          ],
+          [
+            ",",
+            0.583
+          ],
+          [
+            " humans",
+            0.75
+          ],
+          [
+            " first",
+            0.333
+          ],
+          [
+            " set",
+            0.583
+          ],
+          [
+            " foot",
+            0.583
+          ],
+          [
+            " on",
+            0.667
+          ],
+          [
+            " the",
+            0.583
+          ],
+          [
+            " surface",
+            0.75
+          ],
+          [
+            " of",
+            0.583
+          ],
+          [
+            " the",
+            0.667
+          ],
+          [
+            " moon",
+            0.667
+          ],
+          [
+            ".",
+            0.667
+          ]
+        ],
+        [
+          [
+            "Prices",
+            0.833
+          ],
+          [
+            " rose",
+            0.833
+          ],
+          [
+            " three",
+            0.583
+          ],
+          [
+            " percent",
+            0.917
+          ],
+          [
+            " while",
+            0.5
+          ],
+          [
+            " wages",
+            0.833
+          ],
+          [
+            " stayed",
+            0.583
+          ],
+          [
+            " flat",
+            0.5
+          ],
+          [
+            " this",
+            0.667
+          ],
+          [
+            " quarter",
+            0.583
+          ],
+          [
+            ".",
+            0.667
+          ]
+        ]
+      ]
     }
   },
   "read": {
@@ -450,539 +1515,539 @@
         ]
       },
       "norm_matched_random": {
-        "49050": [
-          " furnace",
-          "\u7089",
-          "\u7145",
-          "\u9ad8\u6e29",
-          "\u5347\u6e29",
-          "\u7210",
-          " heating",
-          "\u7119",
-          "\u52a0\u70ed",
-          " anne",
-          " oven",
-          " temperatures"
+        "48603": [
+          "ivities",
+          "ors",
+          "ivity",
+          "ible",
+          "ive",
+          "ual",
+          " research",
+          "eur",
+          "ance",
+          "ivit\u00e9",
+          " interviews",
+          "\u597d"
         ],
-        "20316": [
-          " rail",
-          " Rail",
-          "\u94c1\u8def",
-          " railroad",
-          " ActionController",
-          "Rail",
-          "rail",
-          " Tur",
-          "Tur",
-          " railway",
-          " Rails",
-          " stimulus"
+        "20186": [
+          "\u86a4",
+          "\u8e8d",
+          "\u7ef3",
+          "\u877b",
+          " rope",
+          "\u8df6",
+          "\u78f4",
+          "\u8e09",
+          "\u8d77\u6765",
+          "\u9f99\u95e8",
+          "\u69fd",
+          "\u8e2f"
         ],
-        "14576": [
-          "bs",
-          "erti",
-          "ert",
-          "bens",
-          "isch",
-          "ben",
-          "iena",
-          "ald",
-          "ourn",
-          "acher",
-          "ach",
-          "art"
+        "13521": [
+          "\u754c\u9650",
+          "\u9650\u5ea6",
+          "\u6807\u51c6",
+          "\u4e0a\u9650",
+          "\u8303\u56f4",
+          "\u9650\u989d",
+          "\u9608",
+          " limits",
+          "\u9650\u5236",
+          "\u8981\u6c42",
+          "\u9650\u5b9a",
+          "\u6781\u9650"
         ],
-        "10617": [
-          " nem",
-          " worms",
-          " vul",
-          "\u79c0\u4e3d",
-          " Ca",
-          " Worm",
-          " worm",
-          " eleg",
-          "worm",
-          "ascar",
-          " dau",
-          " brig"
+        "10524": [
+          ",",
+          "\uff0c",
+          ",...\n\n",
+          ",\u2026\n\n",
+          "\u060c",
+          "\u104a",
+          ",...\n",
+          ",it",
+          ",but",
+          ",on",
+          ",and",
+          ",to"
         ],
-        "27253": [
-          "Whilst",
-          " editors",
-          "arat",
-          "\u4e0d\u53d7",
-          " Knights",
-          "\u62e5",
-          " whilst",
-          " Whilst",
-          "While",
-          "\u72b9\u8c6b",
-          " rah",
-          "z\u00e1"
+        "26697": [
+          " plane",
+          "ottie",
+          "ahoo",
+          "\u7f51\u8baf",
+          "\u5982\u610f",
+          "trap",
+          "adero",
+          "\u53ef\u7528\u4e8e",
+          "aldo",
+          "\u8fe4",
+          "mw",
+          "aar"
         ],
-        "63374": [
-          " $\\",
-          " Allah",
-          "\u8036\u7a23",
-          " Jesus",
-          "Jesus",
-          " Nietzsche",
-          " nationalism",
-          "\u4f5b\u6559",
-          " Jews",
-          " Judaism",
-          "\u4f0a\u65af\u5170",
-          "$\\"
+        "65075": [
+          "LECT",
+          "lease",
+          "nect",
+          "ilton",
+          "\u043b\u0435\u043a\u0442",
+          "xAC",
+          "\u68da",
+          "eca",
+          "\u94c3",
+          "xbc",
+          "LETE",
+          "\u9088"
         ],
-        "53284": [
-          " tom",
-          "tom",
-          " champ",
-          " TOM",
-          " Tom",
-          " wrap",
-          "-spin",
-          " Champ",
-          "stamp",
-          "_roll",
-          "Tom",
-          "spin"
+        "53507": [
+          " Adobe",
+          "Adobe",
+          " Windows",
+          " Autodesk",
+          " GUI",
+          "Windows",
+          " Illustrator",
+          " software",
+          " Microsoft",
+          " Photoshop",
+          " MacOS",
+          "\u8f6f\u4ef6"
         ],
-        "1132": [
-          "@Setter",
-          " Setter",
-          "public",
-          " public",
-          "@Column",
-          "@Id",
-          "@JsonProperty",
-          "@Xml",
-          "\tpublic",
-          " setType",
-          " setter",
-          "setId"
+        "1752": [
+          "steller",
+          "zens",
+          "stellung",
+          "zk",
+          "ren",
+          "stell",
+          "biz",
+          "zf",
+          "k\u00f6",
+          "REN",
+          " Ren",
+          "zb"
         ],
-        "10944": [
-          "\u6240\u4ee5\u5728",
-          "\u6240\u4ee5\u6211\u4eec",
-          "\u6240\u4ee5",
-          "\u6240\u4ee5\u8bf4",
-          "\u4f46\u662f\u5982\u679c",
-          "\u56e0\u6b64",
-          "\u6240\u4ee5\u4ed6",
-          "\u6240\u4ee5\u6211",
-          "\u4f46\u5982\u679c",
-          "\u8fd9\u5c31",
-          "\u8fd9\u6837\u7684\u8bdd",
-          "\u4f46\u8fd9"
+        "11689": [
+          " SSR",
+          "\u82cf",
+          "ovi",
+          "\u8607",
+          "SR",
+          "ov",
+          "SS",
+          "\u30bd",
+          " CCC",
+          " \u0421\u043e\u0432\u0435\u0442",
+          "ovie",
+          "\u5171"
         ],
-        "25193": [
-          "aggi",
-          "nal",
-          "nage",
-          "nell",
-          "ifications",
-          "alties",
-          "nes",
-          "naz",
-          "na",
-          "\u0438\u0444\u0438\u043a\u0430",
-          "nels",
-          "alty"
-        ],
-        "38885": [
-          " enough",
-          " (?)",
-          "(?",
-          " none",
-          " neither",
-          "(!",
-          "(or",
-          "\u5e76\u6ca1\u6709",
-          "Enough",
-          " (?",
-          " Enough",
-          "\u2014or"
-        ],
-        "51234": [
-          "\u6743",
-          "\u6743\u5229",
-          "\u7684\u6743\u5229",
-          " rights",
-          "\u6743\u9650",
-          "\u6b0a",
-          "\u6743\u529b",
-          "\u6b0a\u5229",
-          "rights",
-          " quy\u1ec1n",
-          "\u7279\u6743",
-          "\u4f7f\u7528\u6743"
-        ],
-        "48185": [
-          " =",
-          " ",
-          "\u00a0",
-          "  ",
-          " \u200b\u200b",
-          " \u0e46",
-          "\u3000",
-          "   ",
-          "    ",
-          " =\n",
-          " =\r\n",
-          " \t"
-        ],
-        "57576": [
-          " unsubscribe",
-          " subscribers",
-          " subscriber",
-          "unsubscribe",
-          " newsletter",
-          " newsletters",
-          " mailing",
-          " Subscriber",
-          " Newsletter",
-          "Campaign",
-          "subscriber",
-          " unsub"
-        ],
-        "4293": [
+        "39533": [
+          " longer",
+          " Longer",
+          " shorter",
           "\ufffd",
+          ".length",
+          " length",
+          "(length",
+          " Length",
+          "\u6210\u957f",
+          "\u957f\u5ea6",
+          "length",
+          " shortened"
+        ],
+        "39542": [
+          " erotiske",
+          " erotisk",
+          " fry",
+          " nakne",
+          " lange",
+          " fr\u00e6kke",
+          " breve",
+          " store",
+          " ub",
+          " nest",
+          " sorte",
+          " dunk"
+        ],
+        "50831": [
+          " scaffold",
+          "\u811a",
+          " scaff",
+          "\u67b6\u5b50",
+          "\u94a2\u7ba1",
+          "\u642d",
+          "\u6263",
+          "\u8173",
+          "\u642d\u5efa",
+          " Scaffold",
+          "\u62a4\u8eab",
+          "\u67b6"
+        ],
+        "47664": [
+          "icit",
+          "icits",
+          "uded",
+          "izabeth",
+          "astically",
+          "icted",
+          "uding",
+          "udes",
+          "asticsearch",
+          "apses",
+          "ude",
+          "licit"
+        ],
+        "57548": [
+          ".Ret",
+          " Ret",
+          "entionPolicy",
+          "ret",
+          "Ret",
+          " ElementType",
+          "ention",
+          "_ret",
+          "-ret",
+          "Retention",
+          "Mir",
+          " ret"
+        ],
+        "4842": [
+          "\u9898",
+          "\u3002\uff08",
+          "\u3002(",
+          ":(",
+          "\u4e0b\u5217",
+          "\u4e0b\u9762",
+          "\u6211\u80fd",
+          "\u984c",
+          ".(",
+          "\uff1a\n",
+          "\uff1a",
+          ":<"
+        ],
+        "30329": [
+          "'\"",
+          "\"'",
+          "\"*",
+          "'*",
+          "*\"",
+          "\"\"",
+          "''",
+          "\"?",
+          "*'",
+          "\"'\n",
+          "\u00b0",
+          "\"',"
+        ],
+        "34992": [
+          " Submit",
+          "submit",
+          "submitButton",
+          " button",
+          " submit",
+          "button",
+          "Submit",
+          "\u6309\u94ae",
+          " buttons",
+          " btn",
+          "_submit",
+          "-submit"
+        ],
+        "49139": [
+          " Jeremiah",
+          " Isaiah",
+          " prophecy",
+          " prophet",
+          "\u9884\u8a00",
+          "Jer",
+          " proph",
+          " prophets",
+          " ISA",
+          " Ezek",
+          " Jer",
+          " predictions"
+        ],
+        "10889": [
+          "\u822c",
+          "\u65cb",
+          " Dove",
+          "dehy",
+          "_CAT",
+          "ricks",
+          ".asset",
+          "(asset",
+          "asm",
+          " abbreviated",
+          " Quick",
+          " Boat"
+        ],
+        "14101": [
+          "--",
+          " --",
+          " --\n",
+          "--\n",
+          " --\n\n",
+          "--,",
+          "--\n\n",
+          ")--",
+          "--[",
+          "--\r\n",
+          "\"--",
+          " CONSTRAINT"
+        ],
+        "38279": [
+          ".backward",
+          "\u4e00\u4f53\u5316",
+          " mobility",
+          " Mobility",
+          "\u043b\u0435\u0447",
+          "\u043b\u044c\u0442",
+          "_multiply",
+          " quadr",
+          " symbolic",
+          "eworld",
+          "\u8001\u5e08\u7684",
+          " ACTIVE"
+        ],
+        "9183": [
+          " midway",
+          " halfway",
+          " equally",
+          "-face",
+          " evenly",
+          " ready",
+          "-town",
+          "\u540c\u7b49",
+          "-faced",
+          "-ready",
+          " yay",
+          " as"
+        ],
+        "10537": [
+          "steel",
+          "nav",
+          "light",
+          "sky",
+          "red",
+          "Indian",
+          "sal",
+          "medium",
+          "lime",
+          "dark",
+          "mar",
+          "orch"
+        ],
+        "4577": [
+          "away",
+          "ef",
+          " Solid",
+          "af",
+          "aways",
+          "ingham",
+          "well",
+          "ford",
+          "ledge",
+          "efe",
+          " solid",
+          " Bottom"
+        ],
+        "7579": [
+          "0",
+          "\uff10",
+          "\u2080",
+          "\u5341\u6761",
+          "\u0372",
+          " zero",
+          "\ufffd\ufffd",
+          "_zero",
+          ".ZERO",
           "\ufffd",
-          "\ufffd",
-          "\ufffd",
-          "\ufffd\ub2e4",
-          "\ufffd\uc2b5\ub2c8\ub2e4",
-          "\ufffd\u6743",
-          "\ufffd",
-          "\ufffd",
-          "\ufffd",
-          "\u0908",
+          "zero",
           "\ufffd"
         ],
-        "30109": [
-          " party",
-          " parties",
-          "\u653f\u515a",
-          "\u6c11\u4e3b\u515a",
-          "-party",
-          "\u515a",
-          " Party",
-          " Democrats",
-          "_party",
-          "\u0e1e\u0e23\u0e23\u0e04",
-          "party",
-          " Liberal"
+        "23148": [
+          "coln",
+          "seed",
+          "acre",
+          "iments",
+          "amarin",
+          "olen",
+          "nea",
+          "xea",
+          "sey",
+          "ked",
+          "Alg",
+          "ewe"
         ],
-        "35257": [
-          "\u5236",
-          "\u88fd",
-          "\u5236\u6210",
-          " \ufffd",
-          "\uc81c",
-          "\u5236\u4f5c",
-          " ch\u1ebf",
-          "\u5236\u5ea6",
-          "\u5236\u5b9a",
-          " \uc81c",
-          "\u5236\u9020",
-          "\u5236\u54c1"
-        ],
-        "49313": [
-          "\u6f14\u594f",
-          "\u97f3\u4e50\u4f1a",
-          " Concert",
-          "\u97f3\u4e50",
-          " Music",
-          "\u94a2\u7434",
-          "\u5408\u5531",
-          " Piano",
-          "\u4e50\u5668",
-          "\u97f3\u6a02",
-          " Orchestra",
-          " Musical"
-        ],
-        "9147": [
-          " Pittsburgh",
-          " Steelers",
-          " Carnegie",
-          " Mellon",
-          " PIT",
-          " Alle",
-          " Pitt",
-          "Alle",
-          " Penguins",
-          "\u5339",
-          " Pirates",
-          " CM"
-        ],
-        "14498": [
-          "\u0627\u064a",
-          "\u80cc\u4e0a",
-          "\u7ea0",
-          "\uff9f",
-          "\u666f",
-          "\u0e32\u0e23",
-          "\u0e2d\u0e25",
-          "bib",
-          "\u4e00\u5ba1",
-          "\u0627\u0633",
-          "\u0627\u0648",
-          "\u6d1b"
-        ],
-        "38989": [
-          " teens",
-          " teenagers",
-          " teen",
-          "\u9752\u5c11\u5e74",
-          " adolescents",
-          " teenage",
-          " adolescent",
-          " teenager",
-          " Adoles",
-          " Teen",
-          " adolescence",
-          "Teen"
-        ],
-        "9245": [
-          " how",
-          " why",
-          "/about",
-          "\u6b64\u4e8b",
-          " the",
-          " whether",
-          " this",
-          "\u8fd9\u70b9",
-          "/of",
-          " these",
-          " what",
-          "\u5982\u4f55"
-        ],
-        "10476": [
-          "isd",
-          "opian",
-          "ism",
-          "ipay",
-          "IO",
-          "USR",
-          "IS",
-          "ILD",
-          "IAN",
-          "usr",
-          "ISM",
-          "kip"
-        ],
-        "4101": [
-          "\u7a19",
-          "\u683d",
-          "\u52d5",
-          "\u9664",
-          "\u6b65",
-          "\u4ea4\u7ed9",
-          "\u690d\u7269",
-          "\u5f99",
-          "\u52a2",
-          "\u52a8\u529b",
-          " \ufffd",
-          "\u5165"
-        ],
-        "7868": [
-          "bin",
-          "-bin",
-          " bin",
-          "BIN",
-          "inant",
-          "\u0431\u0438\u043d",
-          "bins",
-          "bi",
-          "bit",
-          " BIN",
-          "binations",
-          "bn"
-        ],
-        "23861": [
-          " \u65b9\u6cd5",
-          " \u6ce8\u610f",
-          " [:",
-          "\u7279\u522b\u662f\u5728",
-          " \u53c2\u6570",
-          " {-",
-          " INCLUDE",
-          " \u3010",
+        "47981": [
+          " BILL",
+          "BILL",
+          " billion",
+          "bill",
+          "bil",
+          " Bill",
           " bil",
-          " \u89e3",
-          " :::",
-          " \u521d\u59cb\u5316"
+          " trillion",
+          " Billion",
+          " bill",
+          "-billion",
+          "Bill"
         ],
-        "47845": [
-          " correcting",
-          " fixing",
-          " updating",
-          " attention",
-          " addressing",
-          " refining",
-          " explaining",
-          " reviewing",
-          " adjusting",
-          "updating",
-          " evaluating",
-          " investigating"
+        "10282": [
+          " BufferedImage",
+          ".java",
+          "(java",
+          " jav",
+          " java",
+          " javax",
+          " Jama",
+          " Colt",
+          "java",
+          "-java",
+          " Java",
+          "jav"
         ],
-        "10340": [
-          "\u8c31",
-          " spectrum",
-          " spectra",
-          " spect",
-          " Spect",
-          "spect",
-          " Spectrum",
-          "_spectrum",
-          " spectral",
-          " espect",
-          " spectro",
-          " spec"
+        "44146": [
+          "atis",
+          "uf",
+          "\u00f3l",
+          "pe",
+          "crit",
+          "orges",
+          "pees",
+          "/span",
+          "ufe",
+          "cri",
+          "uss",
+          "\u5708"
         ],
-        "44559": [
-          " expensive",
-          " pricey",
-          "\u6602\u8d35",
-          " Exp",
-          "\u8d35",
-          " costly",
-          "exp",
-          "Exp",
-          "-exp",
-          " EXP",
-          " exp",
-          "\u0e41\u0e1e\u0e07"
-        ],
-        "3250": [
-          "\u0430\u043d\u043d\u044b",
-          "\u043b\u0438\u043d\u0430",
-          "\u043b\u044f",
-          "\u043e\u043f",
-          "\u043e\u0441\u0442",
-          "\u0432\u0430",
-          "\u043e\u0431\u0430\u0432",
-          "\u0430\u043b",
-          "\u0430\u043d",
-          "\u0435\u0439\u0441\u0442\u0432",
-          "\u043e\u043b\u0436",
-          "\u0432\u0435"
+        "3112": [
+          " jointly",
+          " principally",
+          " primarily",
+          " initially",
+          " respectively",
+          " concurrently",
+          " sequentially",
+          " extensively",
+          " chiefly",
+          " separately",
+          " originally",
+          " mainly"
         ]
       },
       "gaussian": [
         [
-          "getResource",
-          "ivet",
-          ".ec",
-          " scal",
-          "mods",
-          "\u9e67",
-          ".mod",
-          "alus",
-          " remind",
-          " esk",
-          ",ll",
-          "\u9694\u79bb"
-        ],
-        [
-          " breadcrumb",
-          "files",
-          " breadcrumbs",
-          "plates",
-          "mid",
-          " crumbs",
-          " Prism",
-          "iral",
-          " Lamp",
-          "\u80d6\u5b50",
-          "tres",
-          " Aeros"
-        ],
-        [
-          "Ctl",
-          " Hamp",
-          "undi",
-          "\u543b",
-          "/Area",
-          " FOUR",
-          " Arrange",
-          "iability",
-          "-area",
-          "phinx",
-          "\u5c06\u6301\u7eed",
-          "ftype"
-        ],
-        [
-          "\u96c5",
-          "NI",
-          " Ley",
-          "\u9119",
-          "\u50ed",
-          "avan",
-          "\u4e0d\u4e0a",
-          "lint",
-          "uren",
-          "\u6069",
-          "\u84c1",
-          "duk"
-        ],
-        [
-          "ILA",
-          "zens",
-          "\u4e0d\u5206",
-          " Cities",
-          "\u98a0",
-          "MH",
-          "KH",
-          "&S",
+          " Hacker",
+          "ement",
+          "endi",
+          " Lodge",
+          "\u4e13\u533a",
+          "nst",
+          "forEach",
+          " Half",
+          "\u4f88",
           "\u5e76\u4e8e",
-          "PH",
-          "\u540d\u4e3a",
-          "PropertyValue"
+          " Plot",
+          "\u5236\u5242"
         ],
         [
-          "pitch",
-          "arel",
-          " gums",
-          " Mana",
-          "_ev",
-          "ycz",
-          "\u793e\u4f1a\u5b9e\u8df5",
-          "amps",
-          " Shelf",
-          "ids",
-          "\u56fd\u5185\u5e02\u573a",
-          " Mahm"
+          "ipes",
+          " LIC",
+          "\u65cf\u7fa4",
+          "ICS",
+          " Bain",
+          "\u4eba\u6b7b\u4ea1",
+          "\u5bb9\u5fcd",
+          ".transfer",
+          "\u4e4b\u4f5c",
+          " neutrality",
+          "\u4ee5\u81f4",
+          "\u624d\u53d1\u73b0"
         ],
         [
-          " genu",
-          "hen",
-          " impl",
-          " notice",
-          "inh",
-          " eb",
-          "erness",
-          "ebb",
-          "\u0119k",
-          "ress",
-          " eve",
-          "\u7684\u6743\u5229"
+          " cad",
+          "\u516b\u5341",
+          "\u810a",
+          "repos",
+          "atable",
+          "\u4e8c\u624b\u623f",
+          "\ufffd",
+          "GridView",
+          "cad",
+          " halfway",
+          "slots",
+          "sink"
         ],
         [
-          "porto",
-          "akis",
-          "paragus",
-          " Society",
-          "\u4f3c",
-          "\u653e\u6620",
-          "\u53d6\u51b3\u4e8e",
-          " Genuine",
-          "\u53d6\u51b3",
-          "ffi",
-          " Vict",
-          " Exactly"
+          "/angular",
+          "migration",
+          "@s",
+          " Beds",
+          "//}\n",
+          "essen",
+          "OBJ",
+          "\u62a4",
+          "plx",
+          " hurl",
+          " Shields",
+          " \"\"},\n"
+        ],
+        [
+          " Making",
+          " Xxx",
+          "\u82eb",
+          "logan",
+          " Posting",
+          " NRA",
+          " zag",
+          "\u7f44",
+          " Doing",
+          " Spacer",
+          "\u68f9",
+          " Covers"
+        ],
+        [
+          " lav",
+          " kre",
+          " best",
+          " spo",
+          "\u8feb",
+          "cut",
+          " mest",
+          "best",
+          "\u5eb5",
+          "ManagerInterface",
+          "\u652f\u90e8",
+          "lav"
+        ],
+        [
+          "bing",
+          "inf",
+          " inf",
+          " lev",
+          "ence",
+          "\u2709",
+          "\u4e00\u7ebf",
+          "\u67a8",
+          " ect",
+          "\u5f6c",
+          "ENCE",
+          "\u7531\u6b64"
+        ],
+        [
+          "rok",
+          " \u0111\u1ea5y",
+          " Jian",
+          "ria",
+          "\u8fd9\u4ef6\u4e8b\u60c5",
+          "expo",
+          "\u662f\u6211\u56fd",
+          "RIA",
+          "zek",
+          "\u5ee0\u5546",
+          "\u5c0f\u4f19\u4f34\u4eec",
+          "illed"
         ]
       ]
     },
@@ -1410,539 +2475,539 @@
         ]
       },
       "norm_matched_random": {
-        "12887": [
-          "\u4e00\u662f",
-          "\u00fe",
-          "AAA",
-          " berg",
-          " Firstly",
-          "\u5fae\u5999",
-          "olf",
-          " arcane",
-          " firstly",
-          " Hav",
-          "\ufffd",
-          "\u57fa\u672c\u539f\u5219"
-        ],
-        "44111": [
-          "ennie",
-          "_Box",
-          "\u0e23\u0e32\u0e22",
-          "Servlet",
-          "opi",
-          ".aspx",
-          "quarters",
-          "\u73c9",
-          ".charset",
-          " Thi\u00ean",
-          " \u043d\u0438\u043a\u0430\u043a",
-          "/fr"
-        ],
-        "31166": [
-          "\u4fee\u8ba2",
-          " Updated",
-          " revised",
-          "\u66f4\u65b0",
-          " updated",
-          "_updated",
-          "updated",
-          " k\u00fd",
-          " Changes",
-          " amended",
-          "UPDATED",
-          "\u4fee\u6539"
-        ],
-        "25900": [
-          "/rfc",
-          "ioned",
-          "\\Message",
-          "naires",
-          "=message",
-          " condolences",
-          "sto",
-          "-driven",
-          "chine",
-          "adows",
-          " Wort",
-          "\u0435\u0441\u0442\u0432\u043e"
-        ],
-        "23001": [
-          " UIGraphics",
-          " Apprent",
-          " bureaucr",
-          "\u91cd\u8981\u4e3e\u63aa",
-          " Buccane",
-          "\ufffd\ufffd",
-          "\u5168\u8986\u76d6",
-          " Hubb",
-          " OTHERWISE",
-          " Belgi",
-          " Psychiat",
-          " Nurs"
-        ],
-        "38996": [
-          "\u8bfb\u61c2",
-          "\u7279\u70b9",
-          "\u4e86\u89e3\u4e00\u4e0b",
-          " assumptions",
-          "ewise",
-          " characteristics",
-          "\u8ba4\u8bc6\u5230",
-          "\u4e86\u89e3\u5230",
-          " clues",
-          "\u83b7\u6089",
-          "\u7684\u7279\u70b9",
-          " Dependencies"
-        ],
-        "4764": [
-          "$log",
-          " tr\u1ee5",
-          "\u5224\u65ad",
-          "\u5927\u6570\u636e",
-          "\u547d\u9898",
-          " rant",
-          " interval",
-          " Coord",
-          " Barbar",
-          " taxi",
-          " Ecc",
-          " sil"
-        ],
-        "28372": [
-          "istic",
-          "ities",
-          "sey",
-          "idade",
-          "ISTIC",
-          "/business",
-          " Mondays",
-          "izing",
-          "idad",
-          "istically",
-          "\u610f\u4e49\u4e0a\u7684",
-          " minded"
-        ],
-        "10492": [
-          "\u8e0f\u5165",
-          "\u9762\u4e34\u7740",
-          "college",
-          "\u6b65\u5165",
-          "\u5165\u515a",
-          "\u8e0f\u4e0a",
-          "\u9762\u5bf9",
-          "\u6000\u7740",
-          "\u5165\u5b66",
-          "\u80a9\u8d1f",
-          "\u7684\u4e00\u5458",
-          "\u9762\u4e34"
-        ],
-        "64755": [
-          "\u4e00\u4e2a\u95ee\u9898",
-          "\u8d27",
-          " Volk",
-          "\u9700\u8981\u7528\u5230",
-          "\u8f66\u9053",
-          "\u5662",
-          " Pipes",
-          "\u4e1d\u4e1d",
-          " lance",
-          " grad",
-          "\u5403\u4e8f",
-          "\u54af"
-        ],
-        "51607": [
-          "\u68c0\u75ab",
-          " microscopic",
-          " membr",
-          " minut",
-          "\u65b0\u95fb\u8bb0\u8005",
-          "exam",
-          "\u5fae\u89c2",
-          "Uploaded",
-          "\u6cf3",
-          " intact",
-          "ulous",
-          "uling"
-        ],
-        "18484": [
-          ":return",
-          " priesthood",
-          "\u6ee5\u7528",
-          "\u7f05",
-          "\u7ec6\u8282",
-          "\u822a\u8fd0",
-          "\u7a0e\u6536",
-          "\u0623\u0648\u0636\u0627\u0639",
-          "\u0645\u0635\u0627\u0644\u062d",
-          " philippines",
-          "\u707e\u533a",
-          "uslim"
-        ],
-        "53919": [
-          "sav",
-          "s",
-          "\u7c4d",
-          "\u7a74",
-          "illery",
-          "heed",
-          "\u9cd6",
-          "\u9e26",
-          "\u5777",
-          "slide",
-          "\u4f34\u968f",
-          "\u542b\u91cf"
-        ],
-        "31897": [
-          "essay",
-          " Essays",
-          " Essay",
-          " essay",
-          " essays",
-          "Essay",
-          " coursework",
-          "\u8303\u6587",
-          " Dissertation",
-          "\u5199\u4f5c",
-          " plagiarism",
-          "\u4f5c\u6587"
-        ],
-        "11008": [
-          " Mounted",
-          "\u4eba\u5bff",
-          " Forg",
-          "    \n    \n    \n",
-          " Furniture",
-          "\u5173\u5207",
-          " Slow",
-          " Memorial",
-          " Chair",
-          "sten",
-          "entlich",
-          " commute"
-        ],
-        "3075": [
-          "pard",
-          "hip",
-          "hips",
-          "imates",
-          "ware",
-          "imate",
-          "/part",
-          "\u4eec",
-          "\u5011",
-          "zimmer",
-          "/host",
-          "manship"
-        ],
-        "7446": [
-          "\u5f00\u5b66",
-          "\u671f\u672b",
-          " \u0441\u0432\u043e\u0438\u043c\u0438",
-          "\u624b\u811a",
-          " midd",
-          "\u6bdb",
-          "\u597d\u4eba",
-          "\u9274\u4e8e",
-          "eworthy",
-          "\u6368",
-          "\u82ae",
-          "inki"
-        ],
-        "62496": [
-          " either",
-          " EITHER",
+        "14227": [
+          "\u7e41\u7410",
+          "\u4e00\u5927\u5806",
+          " manually",
           "\u8981\u4e48",
-          "either",
-          " \u0438\u043c\u0435\u043d\u043d\u043e",
-          " fewer",
-          " \u0445\u043e\u0442\u044c",
-          " whichever",
-          " neither",
-          " arbitrarily",
-          " nearer",
-          "cribes"
+          " cumbersome",
+          "\u52c9\u5f3a",
+          "\u751f\u6015",
+          " indiscrim",
+          "\u624b\u52a8",
+          "\u6216\u591a\u6216\u5c11",
+          "\u8fd8\u5f97",
+          "\u624b\u5de5"
         ],
-        "22898": [
-          "\u98df\u54c1",
-          "\u98df\u54c1\u5b89\u5168",
-          " foods",
-          " food",
-          "\u98df\u6750",
-          "\u98df\u7269",
-          "\u8d28\u91cf\u5b89\u5168",
-          "food",
-          " Foods",
-          "(food",
-          " adul",
-          "\u519c\u4ea7\u54c1"
+        "43636": [
+          "series",
+          " \u0441\u0435\u0440\u0438\u0438",
+          "\u6d53\u5ea6",
+          "\u79d1\u5b66\u5bb6",
+          "sms",
+          "omnia",
+          "pone",
+          "<_",
+          " laure",
+          "_<",
+          " OPTIONAL",
+          "steen"
         ],
-        "19858": [
-          "\u4fae\u8fb1",
-          "\u6b67\u89c6",
-          " racist",
-          " derog",
-          "\u8fb1",
-          " insults",
-          "\u8bcb",
-          " insulting",
-          " insult",
-          " disrespectful",
-          "\u8a00\u8bed",
-          "\u8a00\u8bba"
+        "31734": [
+          "\u83ab\u8fc7\u4e8e",
+          " deserving",
+          " (>",
+          " worthy",
+          "\u5178\u8303",
+          "\u548c\u5b8c\u5584",
+          " Practices",
+          " deserves",
+          "-good",
+          "\u7684\u524d\u63d0\u4e0b",
+          "\u5bf9\u5f85",
+          "abbage"
         ],
-        "62366": [
-          " entitlement",
-          "_legacy",
-          " Lifecycle",
-          " overrides",
-          ".pending",
-          " retro",
-          " OSS",
-          "\u670d\u52a1\u6c34\u5e73",
-          " retrospective",
-          " enrol",
-          " fals",
-          " overridden"
+        "25854": [
+          "\u8d39\u7528",
+          "\u6210\u672c",
+          " costs",
+          "\u7684\u6210\u672c",
+          "\u603b\u6295\u8d44",
+          "\u8cbb\u7528",
+          " cost",
+          "\u9020\u4ef7",
+          "-cost",
+          " Costs",
+          " costing",
+          "\u6295\u8d44\u989d"
         ],
-        "46925": [
-          "\u5927\u7eb2",
-          "\u2716",
-          " brake",
-          "\u5173\u8282",
-          "\u5149",
-          " gymn",
-          " prefer",
-          " Yaz",
-          "RULE",
-          "\u5ef6\u671f",
-          "\u2718",
-          " molt"
+        "23130": [
+          "-next",
+          " successors",
+          " hasNext",
+          " b\u00e0o",
+          "(next",
+          " cruel",
+          " nxt",
+          "ahead",
+          " Ahead",
+          " pr\u00f3ximo",
+          " next",
+          ".ptr"
         ],
-        "26104": [
-          "\u4e0e\u53d1\u5c55",
-          "\u53ca\u5176",
-          "\uff1a\n",
-          "\u53ca",
-          "\u5e76\u4e0d\u4f1a",
-          "\u3011",
-          "simp",
-          " lay",
-          "(By",
-          "_and",
-          "\u662f\u4ec0\u4e48\u5462",
-          "\u6362\u4e86"
+        "38844": [
+          "melon",
+          "quake",
+          "\u6f0f\u6c34",
+          "clock",
+          "educt",
+          "\u6f7a",
+          "shake",
+          "tower",
+          "dings",
+          "\ud0d1",
+          "esso",
+          "(stop"
         ],
-        "10247": [
-          " formatting",
-          "\u89c4\u8303",
-          " guidelines",
-          "\u5199\u4f5c",
-          " Formatting",
-          " Writing",
-          "\u683c\u5f0f",
-          " format",
+        "5240": [
+          " Royals",
+          " Fortnite",
+          "enie",
+          " turnaround",
+          " Lois",
+          " Snapchat",
+          " selfies",
+          " Chiefs",
+          " Pew",
+          ".\u2026",
+          " organising",
+          "...\\"
+        ],
+        "28957": [
+          " simultaneously",
+          "\u6216\u591a",
+          "\u5728\u540c\u4e00",
+          "\u540c\u65f6",
+          " simult",
+          "\u4e0d\u540c\u7684",
+          " multiple",
+          "\u540c\u6642",
+          " simultaneous",
+          " different",
+          " disparate",
+          "\u540c\u4e00"
+        ],
+        "10804": [
+          "\u671b\u53bb",
+          "\u4e00\u773c",
+          "\u89c6\u91ce",
+          "\u307f\u308b\u3068",
+          "\ud83d\udc40",
+          "wards",
+          "ered",
+          "\u4e00\u770b",
+          "/view",
+          "/he",
+          "\u7a97\u5916",
+          "\u3092\u898b\u3066"
+        ],
+        "64863": [
+          "-ready",
+          "\u7684\u4e00\u5458",
+          " battleground",
+          " powerhouse",
+          "\u4e4b\u57ce",
+          "-loving",
+          "-enabled",
+          "-rich",
+          " stronghold",
+          "\u56fd\u5ea6",
+          "\u5927\u6237",
+          " marvel"
+        ],
+        "52646": [
+          "\u5b66\u4e1a",
+          "\u65b0\u5e38\u6001",
+          "\u6211\u5988",
+          "swer",
+          "\u53d4",
+          "\u5065\u5eb7\u7684",
+          "lick",
+          "\ufffd",
+          "\u793e\u4fdd",
+          "\u6050\u614c",
+          "\u4ee5\u4e0b\u662f",
+          "pix"
+        ],
+        "18504": [
+          "\u9ec4\u660f",
+          "Morning",
+          "\u8d77\u5e8a",
+          "\u665a\u4e0a",
+          "noon",
+          " twilight",
+          "\u653e\u5b66",
+          " \u0434\u0435\u043b\u0430",
+          " Evening",
+          "\u4e0b\u73ed",
+          "\u8165",
+          "\u6210\u578b"
+        ],
+        "53518": [
+          " Entre",
+          "Entre",
+          " Noticed",
+          " Entrepreneur",
+          " scorer",
+          "ulp",
+          "Tot",
+          "\u81b3",
+          "\u6700\u597d\u662f",
+          "\u670d\u52a1\u5546",
+          "\u584c",
+          "top"
+        ],
+        "31959": [
+          " measurements",
+          " measurement",
+          " markers",
+          " biom",
+          " concentrations",
+          " measured",
+          " metabol",
+          " measuring",
+          " measures",
+          "\u76d1\u6d4b",
+          " serum",
+          "Measurement"
+        ],
+        "10770": [
+          "\u01ce",
+          "ype",
+          "issen",
+          "walker",
+          "uka",
+          "oti",
+          "lette",
+          "craft",
+          "_te",
+          "xious",
+          "ize",
+          "\u65f6\u5019"
+        ],
+        "3307": [
+          " _.",
+          " DETAILS",
+          " Keeper",
+          " pulumi",
+          " Lost",
+          "\u770b\u4ed6",
+          "\u82a8",
+          "\u062f\u0629",
+          "\u0445\u043e\u0434\u0438\u043c",
+          " ANSW",
+          "\u6b64\u4eba",
+          "\u4e3a\u4f55"
+        ],
+        "7534": [
+          " perfection",
+          " Shake",
+          " McDon",
+          "\u5f64",
+          "\u63a7",
+          " overlooking",
+          "\u68a7",
+          "\u1ec5",
+          "\u65f8",
+          "Perfect",
+          "alach",
+          " Paolo"
+        ],
+        "60418": [
+          "ively",
+          "al",
+          "\u5206\u660e",
+          "\u5f00\u6765",
+          "\u0435\u043f",
+          "SMS",
+          "AsStream",
+          "\u7136",
+          "ting",
+          "uggling",
+          "alte",
+          "aneous"
+        ],
+        "22534": [
+          "\u4f17\u6240\u5468\u77e5",
+          "\u6211\u60f3",
+          "\u6211\u73b0\u5728",
+          "\u6211\u77e5\u9053",
+          "\u4eca\u5929\u6211\u4eec",
+          "\u672c\u4eba",
+          "\u0627\u0632\u064a",
+          "\u6211\u5bf9",
+          "\u79ef\u6781\u914d\u5408",
+          "\u6211\u5728",
+          "\u8981\u505a\u597d",
+          "\u4eca\u5929\u5c0f\u7f16"
+        ],
+        "20575": [
+          " distance",
+          " Distance",
+          "\u8ddd\u79bb",
+          " distances",
+          ".Distance",
+          "Distance",
+          "distance",
+          "\u7684\u8ddd\u79bb",
+          " diagon",
+          " reachable",
+          "\u8ddd\u96e2",
+          " Goth"
+        ],
+        "62619": [
+          " problems",
+          " failure",
+          " failures",
+          " disorders",
+          " issues",
+          " abnormalities",
+          "\u95ee\u9898",
+          "\u95ee\u9898\u662f",
+          "\u7f3a\u9677",
+          " troubles",
+          "\u7f3a\u5931",
+          "failure"
+        ],
+        "46716": [
+          "ubar",
+          " bgcolor",
+          "/column",
+          "-divider",
+          "Borders",
+          " sept",
+          "WithString",
+          ".Row",
+          " xmlhttp",
+          "v\u00e9",
+          " Dess",
+          ":first"
+        ],
+        "25650": [
+          "\u989c\u8272",
+          " color",
+          "\u7684\u989c\u8272",
+          "\u9ec4\u8272",
+          " colors",
+          "\u7ea2\u8272",
+          " \u0446\u0432\u0435\u0442",
+          " colored",
+          " colour",
+          "_color",
+          "\u7eff\u8272",
+          "color"
+        ],
+        "10305": [
+          "-controls",
+          " M\u00e9t",
+          "\u6392\u51fa",
+          "\u7ec4\u7ec7\u5b9e\u65bd",
+          "otron",
+          "\u7b56",
+          " Nun",
+          " NSW",
+          " onSelect",
+          "\u5728\u6df1\u5733",
+          "\u4e86\u4e00\u7cfb\u5217",
+          " accordion"
+        ],
+        "5324": [
+          "/people",
+          "\u5355\u7eaf",
+          "istics",
           " writing",
-          " standards",
-          "Formatting",
-          " conventions"
+          "\u52d0",
+          "/comments",
+          "\u4e00\u95e8",
+          "\u5355\u7eaf\u7684",
+          "\u5e01",
+          " professionally",
+          " san",
+          "\u4ec5\u4ec5\u662f"
         ],
-        "5603": [
-          "\u753b\u753b",
-          " raster",
-          " crossings",
-          " crossing",
-          " intercept",
-          "\u5546\u4f1a",
-          "\u5bbd\u5e26",
-          " start",
-          " wah",
-          "/documentation",
-          " crossover",
-          "\u6587\u5316\u827a\u672f"
+        "41573": [
+          "\u76f8\u53cd",
+          "\u8d1f\u9762",
+          " negativity",
+          " reversal",
+          "/-",
+          "*(-",
+          " negative",
+          "-negative",
+          " opposite",
+          " destruction",
+          " contrario",
+          "\u53cd\u5bf9"
         ],
-        "41540": [
-          "-packed",
-          "\u5934\u6761",
-          "paired",
-          "added",
-          "\u77bf",
-          " stretched",
-          "Value",
-          "ValuePair",
-          "matcher",
-          "ugg",
-          "\u6842",
-          "\u7396"
+        "29656": [
+          "most",
+          "icle",
+          "AFX",
+          "\u6df1\u5904",
+          "\u5a18",
+          " blades",
+          "\u5471",
+          "sortable",
+          "nia",
+          "tera",
+          "hood",
+          "\u5bf9\u4e8e\u6211\u4eec"
         ],
-        "28674": [
-          "conde",
-          " latter",
-          " increasingly",
-          "zelf",
-          " hall",
-          "\ud83c\udffb",
-          " gradually",
-          "VERN",
-          " widely",
-          " rid",
-          " increment",
-          " slowly"
+        "30402": [
+          "\u8fd9\u672c\u4e66",
+          " book",
+          "\u4e66\u4e2d",
+          "\u672c\u4e66",
+          "\u4e00\u672c\u4e66",
+          " books",
+          "\u4e66\u7c4d",
+          "\u672c\u66f8",
+          "ISBN",
+          "(book",
+          "(Book",
+          "book"
         ],
-        "30036": [
-          "\u73b0\u6709\u7684",
-          " our",
-          "\u6211\u4eec\u7684",
-          "\u539f\u6709\u7684",
-          " existing",
-          "\u5df2\u6709",
-          " your",
-          "\u73b0\u6709",
-          "\u4f60\u7684",
-          " proceedings",
-          "\u60a8\u7684",
-          " the"
+        "40775": [
+          " Firefox",
+          " browsers",
+          " Chrome",
+          " firefox",
+          " Mozilla",
+          " Browser",
+          "\u6d4f\u89c8\u5668",
+          " browser",
+          "WebKit",
+          "webkit",
+          " Safari",
+          " safari"
         ],
-        "41179": [
-          " noop",
-          "=False",
-          "=True",
-          " Programm",
-          "=yes",
-          "=false",
-          " &&\n",
-          "\u5f88\u91cd\u8981",
-          "=no",
-          " Won",
-          " &&",
-          ".enabled"
-        ],
-        "19594": [
-          "\u00e4ter",
-          " statistical",
-          "ColumnType",
-          " statistically",
-          "\u4e0d\u516c\u5e73",
-          " Statistical",
-          "\u51fa\u9662",
-          " statistic",
-          " existe",
-          "overall",
-          " comparing",
-          " Fisher"
+        "19570": [
+          " vertical",
+          " lines",
+          "\u7ebf\u6761",
+          "vertical",
+          "lines",
+          ".vertical",
+          " k\u1ebb",
+          "\u5782\u76f4",
+          "Lines",
+          " horizontal",
+          " rulers",
+          " vertically"
         ]
       },
       "gaussian": [
         [
-          "sphere",
-          "\u81ea\u6b64",
-          "\u603b\u7684",
-          "\u60f3\u53bb",
-          "\u7511",
-          "ULL",
-          "aves",
-          "inem",
-          "egg",
-          "\u534e\u4e3d",
-          "\u4ece\u6b64",
-          "SCO"
+          "\u4ee5\u81f4",
+          " invent",
+          " mal",
+          "\u770b\u4e0d\u51fa",
+          "won",
+          " unaffected",
+          "pe",
+          "\u65e0\u4eba",
+          "\u9ed8",
+          " tastes",
+          " infection",
+          "\u00e9g"
         ],
         [
-          "elling",
-          "\u7740\u529b",
-          "outu",
-          "\u590f",
-          "\u5df4",
-          "\u4e0d\u5206",
-          "trinsic",
-          "ocre",
-          "\u9192\u76ee",
-          "/language",
-          "\u7504",
-          "-income"
+          ".light",
+          "light",
+          "/light",
+          "/apple",
+          "\u5149\u7ebf",
+          "LIGHT",
+          " Charlottesville",
+          "cont",
+          "\u59e5",
+          "\ufffd\ufffd",
+          " scrapped",
+          "lest"
         ],
         [
-          "LI",
-          "ArrayOf",
-          "\u5408\u7406",
-          "anni",
-          "\u6211\u662f",
-          " livest",
-          " \u0627\u0644\u0645\u0646",
-          " walkers",
-          "\u4e66\u9662",
-          "\u7fa4",
-          "\ufffd",
-          "\u9635"
+          " glyc",
+          " bis",
+          " pregnant",
+          " p\u00e1",
+          "\u6c61\u6ce5",
+          " Perm",
+          "\u6267\u4e1a",
+          " besie",
+          "\u4fbf\u5229",
+          "PING",
+          "bis",
+          "\u5438\u5f15\u4e86"
         ],
         [
-          "\u6218\u80dc",
-          "\u5885",
-          "\u63b7",
-          "\u94f8",
-          "\u88ab\u9a97",
-          "\u7684\u94b1",
-          "rest",
-          "dds",
-          "tracer",
-          "_cont",
-          "\u7279\u6d3e\u5458",
-          "ddl"
+          "htm",
+          "Encoded",
+          " IBM",
+          "\u6fb9",
+          "jes",
+          "_toolbar",
+          " \u0433\u043e\u0434\u0430",
+          "lesi",
+          "igel",
+          "_component",
+          "[at",
+          "escription"
         ],
         [
-          "\u5230\u4e86",
-          " kole",
-          "(annotation",
-          " corpor",
-          "_DEPEND",
-          "\u574e",
-          "oms",
-          " annotation",
-          "abox",
-          "\u7a74",
-          "\u672a\u5a5a",
-          "\u6106"
+          "escal",
+          "\ufffd\ufffd",
+          "mute",
+          "velle",
+          "\u758f",
+          "\u8bfe\u5916",
+          "edb",
+          "dba",
+          "TRL",
+          "cb",
+          "\u6aa0",
+          "etch"
         ],
         [
-          "LEV",
-          "\u7684\u524d\u63d0",
-          "otropic",
-          "andbox",
-          " Prem",
-          "Tests",
-          "\u00e6re",
-          "kommen",
-          "_goto",
-          "unas",
-          "usta",
-          "\u4f53\u5185"
+          " cocks",
+          " Phill",
+          "addon",
+          " Corm",
+          " PART",
+          "[keys",
+          "\u4e4d",
+          " urls",
+          " Affero",
+          "/Add",
+          "\u548e",
+          "-online"
         ],
         [
-          " unders",
-          "\u83b2",
-          " Pod",
-          ".Pod",
-          "\u52b3\u52a8",
-          "\u4f9d\u6b21",
-          "\u672c\u8f6e",
-          " mob",
-          "unders",
-          " Asia",
-          "\u5e74\u5e74\u5e95",
-          " NR"
+          "\u5f3a\u6709\u529b",
+          "\u6253\u54cd",
+          "pear",
+          "\u7a37",
+          "f\u00e9",
+          " Majority",
+          "\u996e\u6c34",
+          " f\u00e9",
+          " pon",
+          "\u884d",
+          "CRY",
+          "\u4e34"
         ],
         [
-          "\u8bbd",
-          "Disallow",
-          "Serial",
-          "Opened",
-          "\u8d76\u4e0a",
-          " endDate",
-          "Expose",
-          "\u8bb3",
-          "iVar",
-          "Mappings",
-          "\u516c\u958b",
-          "\u816e"
+          "\u56e0\u679c",
+          "\u0440\u0443\u0447",
+          "\u64e6",
+          " tattoos",
+          ".Te",
+          "languages",
+          "\u6a35",
+          "-scalable",
+          "lette",
+          "Forest",
+          " Painter",
+          " starters"
         ]
       ]
     }
