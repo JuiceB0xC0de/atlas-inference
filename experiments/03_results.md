@@ -1,8 +1,8 @@
 # Experiment 03 — Feature-State Dynamics (Gate 3)
 
-**Date:** 2026-06-08 · **Status:** PASSED (one-hop and chain composition).
+**Date:** 2026-06-08 · **Status:** PASSED (one-hop and chain composition); concept transport fails (03D).
 **Model:** `Qwen/Qwen3-8B-Base` · **SAE:** `Qwen/SAE-Res-Qwen3-8B-Base-W64K-L0_50` (resid_post, TopK k=50)
-**Runs:** `modal run experiments/modal_transition_03a.py` (03A), `modal run experiments/modal_transition_03c_chain.py` (03C)
+**Runs:** `modal run experiments/modal_transition_03a.py` (03A), `modal run experiments/modal_transition_03c_chain.py` (03C), `modal run experiments/modal_transition_03d_decode.py` (03D)
 
 ## Question
 
@@ -106,23 +106,55 @@ The composed chain (0.445) is well above the mean-predictor floor (-0.000) and b
 
 Basis overlap is consistently low (~10%), confirming cross-basis is real throughout the chain.
 
+## 03D — Functional decode of composed z₃₅
+
+N=55,378 tokens, n_decode=2,000. Decoded through scatter → W_dec + b_dec → RMSNorm → lm_head → top-10 tokens.
+
+Two reference points:
+- **vs actual_z35**: isolates z-prediction quality (same decode path, different z)
+- **vs model_real**: end-to-end (folds in SAE-decode loss from Gate 1)
+
+| method | vs actual_z35 | vs model_real | math | numeric | code | other |
+|--------|:---:|:---:|:---:|:---:|:---:|:---:|
+| actual_z35 | 1.000 | 0.472 | 0.001 | 0.071 | 0.006 | 0.922 |
+| **free_chain** | **0.440** | **0.291** | 0.000 | 0.067 | 0.003 | 0.930 |
+| direct 18→35 | 0.516 | 0.345 | 0.000 | 0.081 | 0.004 | 0.914 |
+| teacher_forced | 0.729 | 0.457 | 0.000 | 0.076 | 0.006 | 0.918 |
+| mean_predictor | 0.258 | 0.148 | 0.000 | 0.000 | 0.000 | 1.000 |
+
+**The chain reaches the mouth.** 29.1% of the model's top-10 predictions recovered end-to-end through 17 composed linear maps and an SAE decode, well above mean_predictor (14.8%). Distribution shape preserved: 6.7% numeric vs actual's 7.1%.
+
+**But concept directions don't survive transit.**
+
+| quantity | value |
+|----------|-------:|
+| cos(chain(math₁₈), math₃₅) | -0.053 |
+| cos(random through chain) | -0.073 |
+| math feats in basis L18 | 7/20 |
+| math feats in basis L35 | 11/20 |
+
+Indistinguishable from random. Chain-transported math decodes to function words: `" ", ",", "and", "(", "in", ".", "the", "a", "to", "-"`. Actual math₃₅ decodes to digits: `"1", "2", "3", "4", "5", "0", "6", ".", "7", "8"`.
+
+The concept that was separable at L18 (p≈0.02) is **destroyed** by 17 hops of linear composition. Only 7/20 math features were in the L18 basis; the signal was undersampled going in and scattered by the linear maps.
+
 ## What Gate 3 proves
 
 1. **Linear feature-space dynamics compose to a meaningful, bounded degree.** R²=0.445, cosine=0.76, top-k=0.51 at z₃₅ through 17 cross-basis hops. The database can run a linear forward pass.
-2. **Per-hop operators are individually excellent.** Teacher-forced R² climbs from 0.75 to 0.87 in deeper layers — the residual stream becomes more linearly predictable late.
-3. **Composed < direct.** The 17-hop chain (0.445) leaks ~0.12 R² versus a single direct 18→35 map (0.561). Per-hop operators are composable-but-lossy.
-4. **The math concept survives transit.** `cos(T(math_in), math_out) = 0.751` vs random ctrl 0.050 (one-hop). The transition matrix learns to carry semantic content across the basis change.
+2. **Per-hop operators are individually excellent** (teacher-forced R² climbs 0.75→0.87 in deeper layers). The residual stream becomes more linearly predictable late.
+3. **Composed < direct.** The 17-hop chain (0.445) leaks ~0.12 R² versus one big map (0.561). Per-hop operators are composable-but-lossy.
+4. **The math concept survives one hop.** `cos(T(math_in), math_out) = 0.751` vs random 0.050. The transition matrix carries semantic content across a single basis change.
+5. **The chain reaches the mouth.** 29.1% of model's top-10 predictions recovered end-to-end. Distribution shape preserved.
 
 ## What Gate 3 does NOT prove
 
 1. **Top-2048 subspace only.** The transition operates on the top-2048 most-active features per layer. Rare features — including ~12/20 of the 01B math features — are outside this basis. "The map computes" is shown for the common-feature manifold, not the full 65,536-dim state.
 2. **Residual carry-over is doing real work.** The direct 18→35 map hitting R²=0.56 means much of z₃₅ is linearly predictable from z₁₈ because the residual stream carries forward. This is linear composability, not cleanly isolated per-layer nonlinear computation.
-3. **This is feature-state R², not a functional decode.** I haven't yet asked whether the composed z₃₅ decodes to the right tokens through the unembed. R²=0.445 in feature space doesn't directly tell you whether the atlas produces the right next-token predictions.
+3. **Concept directions do NOT survive composition.** The math concept separable at L18 (p≈0.02) is destroyed by 17 hops: `cos(chain(math_18), math_35) = -0.053`, indistinguishable from random (-0.073). Aggregate statistics compose; individual semantics don't.
 
 ## Next experiments
 
-1. **Functional decode of composed z₃₅** — decode predicted vs actual z₃₅ → top-k tokens, overlap. Turns R²=0.445 into "does it actually say the right thing?" The real payoff test.
-2. **Math direction through the 17-hop chain** — does `cos(chain(math_z₁₈), math_z₃₅)` survive the full composed transit?
-3. **Nonlinear operators** — does a small MLP per hop close the composed-vs-direct gap (0.445 → 0.561), capturing the computation a linear map can't?
+1. **Wider basis** — Top-2048 captures common features but misses rare ones. An importance-weighted or concept-aware basis could retain semantic signal.
+2. **Nonlinear transition operators** — Transcoder-style sparse→nonlinear→sparse operators to capture the δ that linear maps scatter.
+3. **Both** — Wider basis + nonlinear hops is the most likely path to concept survival through composition.
 
-Full chain data: [`artifacts_03c_chain.json`](artifacts_03c_chain.json).
+Full chain data: [`artifacts_03c_chain.json`](artifacts_03c_chain.json). Full decode data: [`artifacts_03d_decode.json`](artifacts_03d_decode.json).

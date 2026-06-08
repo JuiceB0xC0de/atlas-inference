@@ -10,7 +10,7 @@ Not "build a better LLM" — the model already exists. The question is whether i
 
 ## Status
 
-Three gates tested. All three pass, with honest caveats. No royal we — just me.
+Three gates tested. Aggregate composition passes; concept transport fails.
 
 ## Gates
 
@@ -18,7 +18,7 @@ I test load-bearing premises in order. Each one must hold for the next to matter
 
 1. **Bridge** — Can atlas feature directions produce coherent vocabulary through the model's real unembed? ✅
 2. **Concept** — Can a contrastive, prompt-derived direction in feature space produce concept-matched vocabulary? ✅ (L18) / ❌ (L35)
-3. **Dynamics** — Can feature states at one layer predict feature states at the next? ✅ (one-hop and chain)
+3. **Dynamics** — Can feature states at one layer predict feature states at the next? ✅ aggregate / ❌ concept transport
 
 ---
 
@@ -134,29 +134,50 @@ Math-direction thread: `cos(T(math_in), math_out) = 0.751` vs random ctrl 0.050.
 1. **Linear feature-space dynamics compose to a meaningful, bounded degree.** R²=0.445, cosine=0.76, top-k=0.51 at the final layer through 17 hops of cross-basis transitions. The database can run a linear forward pass.
 2. **Per-hop operators are individually excellent** (teacher-forced R² 0.72→0.87, climbing in deeper layers). The residual stream becomes more linearly predictable late in the network.
 3. **Composed < direct.** The 17-hop chain (0.445) leaks ~0.12 R² versus a single direct 18→35 map (0.561). The per-hop linear operators capture a composable-but-lossy approximation — they don't capture more than a direct linear map.
-4. **The math concept survives transit.** In the 03A one-hop test, `cos(T(math_in), math_out) = 0.751` vs random ctrl 0.050. The transition matrix learns to carry semantic content across the basis change.
+4. **The math concept survives one hop.** In the 03A one-hop test, `cos(T(math_in), math_out) = 0.751` vs random ctrl 0.050. The transition matrix learns to carry semantic content across a single basis change.
+5. **The chain reaches the mouth.** 03D: free chain recovers 44.0% of actual z₃₅ tokens, 29.1% of model's real top-10 predictions end-to-end. Well above mean_predictor (25.8%/14.8%). The distribution shape is preserved.
+
+### 03D — Functional decode of composed z₃₅
+
+The 03C result (R²=0.445) was internal to feature space. 03D asks the behavioral question: does the composed z₃₅ decode to the right tokens?
+
+Composed z₃₅ decoded through `scatter → W_dec + b_dec → RMSNorm → lm_head → top-10`, compared to two references:
+
+| method | vs actual_z35 | vs model_real | numeric | other |
+|--------|:---:|:---:|:---:|:---:|
+| actual_z35 | 1.000 | 0.472 | 0.071 | 0.922 |
+| **free_chain** | **0.440** | **0.291** | 0.067 | 0.930 |
+| direct 18→35 | 0.516 | 0.345 | 0.081 | 0.914 |
+| teacher_forced | 0.729 | 0.457 | 0.076 | 0.918 |
+| mean_predictor | 0.258 | 0.148 | 0.000 | 1.000 |
+
+**The chain reaches the mouth.** 29.1% of the model's top-10 predictions recovered end-to-end through 17 composed linear maps and an SAE decode, well above the 14.8% floor. The distribution shape is preserved (6.7% numeric vs actual's 7.1%).
+
+**But concept directions don't survive transit.** The math concept separable at L18 (p≈0.02) is destroyed by 17 hops: `cos(chain(math_18), math_35) = -0.053` vs random ctrl -0.073. Chain-transported math decodes to function words; actual math_35 decodes to digits.
+
+Full results: [`experiments/03d_results.md`](experiments/03d_results.md)
 
 ### What Gate 3 does NOT prove
 
 1. **Top-2048 subspace only.** The transition operates on the top-2048 most-active features per layer. Rare features — including ~12/20 of the 01B math features — are outside this basis. "The map computes" is shown for the common-feature manifold, not the full 65,536-dim state.
 2. **Residual carry-over is doing real work.** The direct 18→35 map hitting R²=0.56 means much of z₃₅ is linearly predictable from z₁₈ because the residual stream carries forward. This is linear composability, not cleanly isolated per-layer nonlinear computation.
-3. **This is feature-state R², not a functional decode.** I haven't yet asked whether the composed z₃₅ decodes to the right tokens through the unembed. R²=0.445 in feature space doesn't directly tell you whether the atlas produces the right next-token predictions.
+3. **Concept directions do NOT survive composition.** The math concept separable at L18 (p≈0.02) is destroyed by 17 hops of linear composition: `cos(chain(math_18), math_35) = -0.053`, indistinguishable from random (-0.073). Chain-transported math decodes to function words ("the", "a", "in"). Aggregate statistics compose; individual semantics don't.
 
 ---
 
 ## What comes next
 
-The chain didn't collapse. That was the thing that could have killed the project, and it didn't. The next experiments turn this statistical result into behavioral ones:
+The chain composes at the aggregate level but loses concept directions in transit. The path forward:
 
-1. **Functional decode of composed z₃₅** — Take the free-running composed z₃₅, push through `RMSNorm → lm_head`, compare top-k tokens against the real model. Turns R²=0.445 into "does it say the right thing?"
-2. **Math direction through the 17-hop chain** — Does the math-specific concept direction from 01B survive transit from L18 to L35 through the composed transitions?
-3. **Nonlinear operators** — Does a small MLP per hop close the composed-vs-direct gap (0.445 → 0.561), capturing the computation a linear map can't?
+1. **Wider basis** — Top-2048 captures common features but misses rare ones. An importance-weighted or concept-aware basis could retain semantic signal.
+2. **Nonlinear transition operators** — Ridge regression captures change-of-basis but not the MLP computation. Transcoder-style sparse→nonlinear→sparse operators could capture the δ that linear maps scatter.
+3. **Both** — Wider basis + nonlinear hops is the most likely path to concept survival through composition.
 
 ---
 
 ## Data
 
-The atlas itself is **not** in this repo (too large, and it's a research artifact). Point `ATLAS_DB` at your own build. The underlying SAEs are public (released by the Qwen team); `Qwen3-8B-Base` weights are on the Hugging Face Hub.
+The atlas is available on HuggingFace: [`juiceb0xc0de/qwen3-8b-base-atlas`](https://huggingface.co/datasets/juiceb0xc0de/qwen3-8b-base-atlas). Point `ATLAS_DB` at the downloaded `atlas.sqlite`. The underlying SAEs are public ([`Qwen/SAE-Res-Qwen3-8B-Base-W64K-L0_50`](https://huggingface.co/Qwen/SAE-Res-Qwen3-8B-Base-W64K-L0_50)); `Qwen3-8B-Base` weights are on the Hugging Face Hub.
 
 ## Why public
 

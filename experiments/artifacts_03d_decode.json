@@ -1,0 +1,92 @@
+{
+  "N_tokens": 55378,
+  "n_decode": 2000,
+  "splits": {
+    "n_train": 47071,
+    "n_test": 8307
+  },
+  "decode": {
+    "actual_z35": {
+      "tok_overlap_vs_actual_z35": 1.0,
+      "tok_overlap_vs_model_real": 0.4723,
+      "math_frac": 0.001,
+      "numeric_frac": 0.071,
+      "code_frac": 0.006,
+      "other_frac": 0.922
+    },
+    "free_chain": {
+      "tok_overlap_vs_actual_z35": 0.4397,
+      "tok_overlap_vs_model_real": 0.2906,
+      "math_frac": 0.0,
+      "numeric_frac": 0.067,
+      "code_frac": 0.003,
+      "other_frac": 0.93
+    },
+    "direct_18_35": {
+      "tok_overlap_vs_actual_z35": 0.5158,
+      "tok_overlap_vs_model_real": 0.3447,
+      "math_frac": 0.0,
+      "numeric_frac": 0.081,
+      "code_frac": 0.004,
+      "other_frac": 0.914
+    },
+    "teacher_forced": {
+      "tok_overlap_vs_actual_z35": 0.729,
+      "tok_overlap_vs_model_real": 0.4572,
+      "math_frac": 0.0,
+      "numeric_frac": 0.076,
+      "code_frac": 0.006,
+      "other_frac": 0.918
+    },
+    "mean_predictor": {
+      "tok_overlap_vs_actual_z35": 0.2576,
+      "tok_overlap_vs_model_real": 0.1483,
+      "math_frac": 0.0,
+      "numeric_frac": 0.0,
+      "code_frac": 0.0,
+      "other_frac": 1.0
+    }
+  },
+  "math_through_chain": {
+    "cos_chain_math_vs_actual_math35": -0.0531,
+    "cos_random_ctrl": -0.0732,
+    "math_feats_in_basis_L18": 7,
+    "math_feats_in_basis_L35": 11,
+    "decoded_chain_math": {
+      "math_frac": 0.0,
+      "numeric_frac": 0.0,
+      "code_frac": 0.0,
+      "other_frac": 1.0
+    },
+    "decoded_actual_math35": {
+      "math_frac": 0.0,
+      "numeric_frac": 0.9,
+      "code_frac": 0.0,
+      "other_frac": 0.1
+    },
+    "tokens_chain_math": [
+      " ",
+      " ,",
+      " and",
+      " (",
+      " in",
+      " .",
+      " the",
+      " a",
+      " to",
+      " -"
+    ],
+    "tokens_actual_math35": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "0",
+      "6",
+      ".",
+      "7",
+      "8"
+    ]
+  }
+}
