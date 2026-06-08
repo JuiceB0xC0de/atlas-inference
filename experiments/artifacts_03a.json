@@ -1,0 +1,51 @@
+{
+  "N_tokens": 66409,
+  "lambda": 1000.0,
+  "basis_overlap_in_out": 211,
+  "layers": [
+    18,
+    19
+  ],
+  "fitted_T": {
+    "cosine": 0.8796,
+    "r2": 0.9174,
+    "topk_overlap": 0.7424
+  },
+  "mean_predictor": {
+    "cosine": 0.4312,
+    "r2": -0.0,
+    "topk_overlap": 0.2492
+  },
+  "shuffle_null": {
+    "cosine": 0.3708,
+    "r2": -0.0389,
+    "topk_overlap": 0.2367
+  },
+  "math_feats_top20_in": [
+    41343,
+    53809,
+    13438,
+    56980,
+    40467,
+    62934,
+    4175,
+    2785,
+    55276,
+    47795,
+    40681,
+    21100,
+    46091,
+    50683,
+    31520,
+    16813,
+    28040,
+    62860,
+    30938,
+    64920
+  ],
+  "math_feats_in_basis_Lin": 7,
+  "math_feats_in_basis_Lout": 8,
+  "math_transport_cos_T": 0.7509,
+  "math_transport_cos_random_ctrl": 0.05,
+  "math_dir_cos_in_vs_out_raw": -0.0003
+}
