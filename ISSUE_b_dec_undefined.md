@@ -2,7 +2,6 @@
 
 While running `ruff check .` as part of repo housekeeping, I found the following error in `experiments/01_decoder_unembed_bridge.py` at line 63:
 
-```
 F821 Undefined name `b_dec`
   --> experiments/01_decoder_unembed_bridge.py:63:13
    |
