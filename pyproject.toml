@@ -1,0 +1,43 @@
+[project]
+name = "atlas-inference"
+version = "0.1.0"
+description = "Can a static feature atlas of a frozen language model be driven as a runnable, legible surrogate of that model?"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "Rick Holmberg", email = "juiceb0xc0de@users.noreply.github.com" },
+]
+
+dependencies = [
+    "torch>=2.1",
+    "transformers>=4.51",
+    "huggingface_hub>=0.23",
+    "safetensors>=0.4",
+    "accelerate>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+    "modal>=1.4",
+    "orjson>=3.9",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["experiments*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["experiments"]
